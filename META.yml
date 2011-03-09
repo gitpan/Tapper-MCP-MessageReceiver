@@ -23,10 +23,10 @@ no_index:
 requires:
   AnyEvent: 0
   EV: 0
-  Tapper::Config: 3.000001
-  Tapper::Model: 3.000001
-  YAML::Syck: 0
+  Tapper::Config: 3.000002
+  Tapper::Model: 3.000002
+  YAML::Syck: 1.17
   perl: 5.10.0
 resources:
   license: http://dev.perl.org/licenses/
-version: 3.000001
+version: 3.000002
