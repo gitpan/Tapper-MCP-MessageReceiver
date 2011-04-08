@@ -20,4 +20,5 @@ MANIFEST			This list of files
 META.yml
 README
 t/00-load.t
+t/fixtures/testrundb/testrun_empty.yml
 t/tapper-mcp-messagereceiver.t

@@ -1,11 +1,12 @@
-#!/usr/bin/env perl
+#! perl
 
 use Tapper::MCP::MessageReceiver;
+use App::Daemon qw(daemonize);
+use English '-no_match_vars';
 
 
-my $daemon = Tapper::MCP::MessageReceiver->new_with_options(pidfile=>'/tmp/pid');
+$App::Daemon::as_user    = "root";
+my $daemon = Tapper::MCP::MessageReceiver->new;
+daemonize();
 
 $daemon->run();
-
-warn($daemon->status_message);
-exit($daemon->exit_code);
