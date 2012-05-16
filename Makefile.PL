@@ -1,33 +1,70 @@
+
 use strict;
 use warnings;
 
-use inc::Module::Install;
+use 5.010;
 
-name     'Tapper-MCP-MessageReceiver';
-all_from 'lib/Tapper/MCP/MessageReceiver.pm';
-author   'AMD OSRC Tapper Team <tapper@amd64.org>';
-license  'perl';
+use ExtUtils::MakeMaker 6.30;
 
-build_requires 'Test::More';
-build_requires 'IO::Socket::INET';
 
-author_requires 'Module::Install::WriteAll';
 
-requires 'App::Daemon';
-requires 'Tapper::Model' => "3.000010";
-requires 'Tapper::Config' => "3.000010";
-requires 'Tapper::Base' => "3.000010";
-requires 'Moose'             => "1.24";
-requires 'YAML::Syck'        => "1.17";
-requires 'AnyEvent';
-requires 'EV';
+my %WriteMakefileArgs = (
+  "ABSTRACT" => "Tapper - Message receiver for Tapper MCP",
+  "AUTHOR" => "AMD OSRC Tapper Team <tapper\@amd64.org>",
+  "BUILD_REQUIRES" => {
+    "English" => 0,
+    "IO::Socket::INET" => 0,
+    "Tapper::Schema::TestTools" => 0,
+    "Test::Fixture::DBIC::Schema" => 0,
+    "Test::More" => 0,
+    "YAML::Syck" => 0,
+    "strict" => 0,
+    "warnings" => 0
+  },
+  "CONFIGURE_REQUIRES" => {
+    "ExtUtils::MakeMaker" => "6.30"
+  },
+  "DISTNAME" => "Tapper-MCP-MessageReceiver",
+  "EXE_FILES" => [
+    "bin/tapper-mcp-messagereceiver",
+    "bin/tapper-mcp-messagereceiver-hypnotoad"
+  ],
+  "LICENSE" => "open_source",
+  "NAME" => "Tapper::MCP::MessageReceiver",
+  "PREREQ_PM" => {
+    "App::Daemon" => 0,
+    "File::Spec::Functions" => 0,
+    "File::Temp" => 0,
+    "Log::Log4perl" => 0,
+    "Mojo::Server::Hypnotoad" => 0,
+    "Mojolicious::Lite" => 0,
+    "Tapper::Config" => 0,
+    "Tapper::Model" => 0
+  },
+  "VERSION" => "4.0.1",
+  "test" => {
+    "TESTS" => "t/*.t"
+  }
+);
 
-install_script glob('bin/*');
 
-repository 'git://github.com/amd/Tapper-MCP-MessageReceiver.git';
-bugtracker 'http://rt.cpan.org/NoAuth/ReportBug.html?Queue=Tapper-MCP-MessageReceiver';
+unless ( eval { ExtUtils::MakeMaker->VERSION(6.56) } ) {
+  my $br = delete $WriteMakefileArgs{BUILD_REQUIRES};
+  my $pp = $WriteMakefileArgs{PREREQ_PM};
+  for my $mod ( keys %$br ) {
+    if ( exists $pp->{$mod} ) {
+      $pp->{$mod} = $br->{$mod} if $br->{$mod} > $pp->{$mod};
+    }
+    else {
+      $pp->{$mod} = $br->{$mod};
+    }
+  }
+}
 
-auto_install;
+delete $WriteMakefileArgs{CONFIGURE_REQUIRES}
+  unless eval { ExtUtils::MakeMaker->VERSION(6.52) };
 
-WriteAll;
+WriteMakefile(%WriteMakefileArgs);
+
+
 
