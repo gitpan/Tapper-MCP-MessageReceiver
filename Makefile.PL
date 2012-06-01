@@ -36,12 +36,13 @@ my %WriteMakefileArgs = (
     "File::Spec::Functions" => 0,
     "File::Temp" => 0,
     "Log::Log4perl" => 0,
+    "Module::Find" => "0.11",
     "Mojo::Server::Hypnotoad" => 0,
     "Mojolicious::Lite" => 0,
     "Tapper::Config" => 0,
     "Tapper::Model" => 0
   },
-  "VERSION" => "4.0.1",
+  "VERSION" => "4.0.2",
   "test" => {
     "TESTS" => "t/*.t"
   }
