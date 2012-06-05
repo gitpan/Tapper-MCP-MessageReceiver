@@ -3,7 +3,7 @@ BEGIN {
   $Tapper::MCP::MessageReceiver::AUTHORITY = 'cpan:AMD';
 }
 {
-  $Tapper::MCP::MessageReceiver::VERSION = '4.0.2';
+  $Tapper::MCP::MessageReceiver::VERSION = '4.0.3';
 }
 # ABSTRACT: Tapper - Message receiver for Tapper MCP
 
