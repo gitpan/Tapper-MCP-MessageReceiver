@@ -1,5 +1,9 @@
 Revision history for Tapper-MCP-MessageReceiver
 
+4.1.0     2012-10-19
+        * PostgreSQL support
+        - rename USER into OWNER
+
 4.0.3     2012-06-05
 	- log file handling during test
 

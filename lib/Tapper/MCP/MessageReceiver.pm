@@ -1,9 +1,11 @@
 package Tapper::MCP::MessageReceiver;
+# git description: v4.0.3-3-g8147006
+
 BEGIN {
   $Tapper::MCP::MessageReceiver::AUTHORITY = 'cpan:AMD';
 }
 {
-  $Tapper::MCP::MessageReceiver::VERSION = '4.0.3';
+  $Tapper::MCP::MessageReceiver::VERSION = '4.1.0';
 }
 # ABSTRACT: Tapper - Message receiver for Tapper MCP
 
