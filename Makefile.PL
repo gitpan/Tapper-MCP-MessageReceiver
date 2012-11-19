@@ -42,7 +42,7 @@ my %WriteMakefileArgs = (
     "Tapper::Config" => 0,
     "Tapper::Model" => 0
   },
-  "VERSION" => "4.1.0",
+  "VERSION" => "4.1.1",
   "test" => {
     "TESTS" => "t/*.t"
   }
