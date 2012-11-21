@@ -1,5 +1,8 @@
 Revision history for Tapper-MCP-MessageReceiver
 
+4.1.2     2012-11-21
+        - undaemonize tapper-mcp-messagereceiver
+
 4.1.1     2012-11-20
         - dzil pluginbundle TAPPER
 

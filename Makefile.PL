@@ -32,7 +32,6 @@ my %WriteMakefileArgs = (
   "LICENSE" => "open_source",
   "NAME" => "Tapper::MCP::MessageReceiver",
   "PREREQ_PM" => {
-    "App::Daemon" => 0,
     "File::Spec::Functions" => 0,
     "File::Temp" => 0,
     "Log::Log4perl" => 0,
@@ -42,7 +41,7 @@ my %WriteMakefileArgs = (
     "Tapper::Config" => 0,
     "Tapper::Model" => 0
   },
-  "VERSION" => "4.1.1",
+  "VERSION" => "4.1.2",
   "test" => {
     "TESTS" => "t/*.t"
   }

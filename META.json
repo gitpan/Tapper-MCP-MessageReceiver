@@ -21,7 +21,6 @@
       },
       "runtime" : {
          "requires" : {
-            "App::Daemon" : "0",
             "File::Spec::Functions" : "0",
             "File::Temp" : "0",
             "Log::Log4perl" : "0",
@@ -59,7 +58,7 @@
          "web" : "http://github.com/tapper/Tapper-MCP-MessageReceiver"
       }
    },
-   "version" : "4.1.1",
+   "version" : "4.1.2",
    "x_Dist_Zilla" : {
       "plugins" : [
          {
