@@ -6,7 +6,7 @@ META.yml
 Makefile.PL
 README
 bin/tapper-mcp-messagereceiver
-bin/tapper-mcp-messagereceiver-hypnotoad
+bin/tapper-mcp-messagereceiver-daemon
 dist.ini
 lib/Tapper/MCP/MessageReceiver.pm
 t/00-load.t

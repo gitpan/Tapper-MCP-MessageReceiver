@@ -13,35 +13,34 @@ my %WriteMakefileArgs = (
   "AUTHOR" => "AMD OSRC Tapper Team <tapper\@amd64.org>",
   "BUILD_REQUIRES" => {
     "English" => 0,
+    "File::Temp" => 0,
     "IO::Socket::INET" => 0,
     "Tapper::Schema::TestTools" => 0,
     "Test::Fixture::DBIC::Schema" => 0,
     "Test::More" => 0,
-    "YAML::Syck" => 0,
-    "strict" => 0,
-    "warnings" => 0
+    "YAML::Syck" => 0
   },
   "CONFIGURE_REQUIRES" => {
     "ExtUtils::MakeMaker" => "6.30"
   },
   "DISTNAME" => "Tapper-MCP-MessageReceiver",
   "EXE_FILES" => [
-    "bin/tapper-mcp-messagereceiver",
-    "bin/tapper-mcp-messagereceiver-hypnotoad"
+    "bin/tapper-mcp-messagereceiver-daemon",
+    "bin/tapper-mcp-messagereceiver"
   ],
   "LICENSE" => "open_source",
   "NAME" => "Tapper::MCP::MessageReceiver",
   "PREREQ_PM" => {
     "File::Spec::Functions" => 0,
-    "File::Temp" => 0,
     "Log::Log4perl" => 0,
     "Module::Find" => "0.11",
-    "Mojo::Server::Hypnotoad" => 0,
     "Mojolicious::Lite" => 0,
     "Tapper::Config" => 0,
-    "Tapper::Model" => 0
+    "Tapper::Model" => 0,
+    "strict" => 0,
+    "warnings" => 0
   },
-  "VERSION" => "4.1.2",
+  "VERSION" => "4.1.3",
   "test" => {
     "TESTS" => "t/*.t"
   }

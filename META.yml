@@ -4,13 +4,12 @@ author:
   - 'AMD OSRC Tapper Team <tapper@amd64.org>'
 build_requires:
   English: 0
+  File::Temp: 0
   IO::Socket::INET: 0
   Tapper::Schema::TestTools: 0
   Test::Fixture::DBIC::Schema: 0
   Test::More: 0
   YAML::Syck: 0
-  strict: 0
-  warnings: 0
 configure_requires:
   ExtUtils::MakeMaker: 6.30
 dynamic_config: 0
@@ -22,19 +21,19 @@ meta-spec:
 name: Tapper-MCP-MessageReceiver
 requires:
   File::Spec::Functions: 0
-  File::Temp: 0
   Log::Log4perl: 0
   Module::Find: 0.11
-  Mojo::Server::Hypnotoad: 0
   Mojolicious::Lite: 0
   Tapper::Config: 0
   Tapper::Model: 0
   perl: 5.010
+  strict: 0
+  warnings: 0
 resources:
   bugtracker: http://rt.cpan.org/Public/Dist/Display.html?Name=Tapper-MCP-MessageReceiver
   homepage: http://metacpan.org/release/Tapper-MCP-MessageReceiver
   repository: git://github.com/tapper/Tapper-MCP-MessageReceiver.git
-version: 4.1.2
+version: 4.1.3
 x_Dist_Zilla:
   plugins:
     -
